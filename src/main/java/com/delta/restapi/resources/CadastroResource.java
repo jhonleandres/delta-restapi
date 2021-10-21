@@ -32,7 +32,7 @@ public class CadastroResource {
 		return cadastroRepository.save(cadastro);
 	}
 	
-	@PutMapping("/cadastro{id}")
+	@PutMapping("/cadastro/{id}")
 	public Cadastro updateCadastro(@RequestBody Cadastro cadastro) {
 		return cadastroRepository.save(cadastro);
 	}
