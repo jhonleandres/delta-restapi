@@ -22,19 +22,19 @@ public class CadastroResource {
 	@Autowired
 	CadastroRepository cadastroRepository;
 	
-	@CrossOrigin(origins = "http://delta-front.vercel.app")
+	@CrossOrigin(origins = "https://delta-front.vercel.app")
 	@GetMapping("/cadastro/{id}")
 	public Cadastro findOne(@PathVariable(value="id") long id){
 		return cadastroRepository.findById(id);
 	}
 	
-	@CrossOrigin(origins = "http://delta-front.vercel.app")
+	@CrossOrigin(origins = "https://delta-front.vercel.app")
 	@PostMapping("/cadastro")
 	public Cadastro saveCadastro(@RequestBody Cadastro cadastro) {
 		return cadastroRepository.save(cadastro);
 	}
 	
-	@CrossOrigin(origins = "http://delta-front.vercel.app")
+	@CrossOrigin(origins = "https://delta-front.vercel.app")
 	@PutMapping("/cadastro/{id}")
 	public Cadastro updateCadastro(@RequestBody Cadastro cadastro) {
 		return cadastroRepository.save(cadastro);
