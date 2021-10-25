@@ -48,19 +48,19 @@ public class Cadastro implements Serializable{
 		this.dataNascimento = dataNascimento;
 	}
 
-	public Number getFoneCelular() {
+	public String getFoneCelular() {
 		return foneCelular;
 	}
 
-	public void setFoneCelular(Number foneCelular) {
+	public void setFoneCelular(String foneCelular) {
 		this.foneCelular = foneCelular;
 	}
 
-	public Number getFoneFixo() {
+	public String getFoneFixo() {
 		return foneFixo;
 	}
 
-	public void setFoneFixo(Number foneFixo) {
+	public void setFoneFixo(String foneFixo) {
 		this.foneFixo = foneFixo;
 	}
 
@@ -80,11 +80,11 @@ public class Cadastro implements Serializable{
 		this.newsletter = newsletter;
 	}
 
-	public Number getCep() {
+	public String getCep() {
 		return cep;
 	}
 
-	public void setCep(Number cep) {
+	public void setCep(String cep) {
 		this.cep = cep;
 	}
 
@@ -155,15 +155,15 @@ public class Cadastro implements Serializable{
 	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private LocalDate dataNascimento;
 	
-	private Number foneCelular;
+	private String foneCelular;
 	
-	private Number foneFixo;
+	private String foneFixo;
 	
 	private String email;
 	
 	private Boolean newsletter;
 	
-	private Number cep;
+	private String cep;
 	
 	private String logradouro;
 	
