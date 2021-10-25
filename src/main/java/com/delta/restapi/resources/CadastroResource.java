@@ -15,23 +15,26 @@ import com.delta.restapi.repository.CadastroRepository;
 
 
 @RestController
-@CrossOrigin(origins = "*")
+
 @RequestMapping(value="/api")
 public class CadastroResource {
 	
 	@Autowired
 	CadastroRepository cadastroRepository;
 	
+	@CrossOrigin(origins = "http://delta-front.vercel.app")
 	@GetMapping("/cadastro/{id}")
 	public Cadastro findOne(@PathVariable(value="id") long id){
 		return cadastroRepository.findById(id);
 	}
 	
+	@CrossOrigin(origins = "http://delta-front.vercel.app")
 	@PostMapping("/cadastro")
 	public Cadastro saveCadastro(@RequestBody Cadastro cadastro) {
 		return cadastroRepository.save(cadastro);
 	}
 	
+	@CrossOrigin(origins = "http://delta-front.vercel.app")
 	@PutMapping("/cadastro/{id}")
 	public Cadastro updateCadastro(@RequestBody Cadastro cadastro) {
 		return cadastroRepository.save(cadastro);
